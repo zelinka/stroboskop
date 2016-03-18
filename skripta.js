@@ -33,8 +33,9 @@ window.addEventListener('load', function() {
 			ustavi = false;
 		} else {
 			novId = (id+1) % vrednosti.length;
-			timeout = Math.floor((Math.random() * (maxCas-minCas)) + minCas);
-			setTimeout(function() {spremeniBarvo(novId)} , timeout);
+			setTimeout(function() {
+				spremeniBarvo(novId)
+			} , Math.floor((Math.random() * (document.querySelector("#max").value - document.querySelector("#min").value)) + document.querySelector("#min").value));
 		}		
 	}
 	
